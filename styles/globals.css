@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato';
+  height: 100vh;
+
+}
+body > div {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+

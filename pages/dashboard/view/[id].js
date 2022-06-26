@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import axios from 'axios';
-import { ResponseContainer } from './styles';
+import { ResponseContainer } from '../../../styles/viewStyles';
 import Header from '../../../components/Navbar';
 import Table from '../../../components/Table';
 import ProtectedRoute from '../../../components/ProtectedRoute';

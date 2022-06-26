@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Header from '../components/Navbar';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
+import { Container } from '../styles/globalStyles';
 
 export default function Home() {
   const { status } = useSession();
@@ -20,7 +21,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <Container>
       <Head>
         <title>getReferral</title>
         <meta name="description" content="Referrals made easy" />
@@ -35,6 +36,6 @@ export default function Home() {
 
       {/* Footer Component */}
       <Footer />
-    </div>
+    </Container>
   );
 }

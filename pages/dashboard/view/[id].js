@@ -15,7 +15,6 @@ function ViewResponse() {
   // fetching information for a particular Job ID.
   const router = useRouter();
 
-  
   useEffect(() => {
     if (Object.keys(router.query).length > 0) {
       const { id } = router.query;
@@ -38,13 +37,8 @@ function ViewResponse() {
   const renderResponses = () => {
     if (loading) {
       return <div />;
-    } else {
-      if (responses) {
-        return <Table responses={responses} />;
-      } else {
-        return <div>dasdas</div>;
-      }
     }
+    return <Table responses={responses} />;
   };
   return (
     <ProtectedRoute>

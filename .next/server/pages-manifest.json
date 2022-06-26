@@ -1,8 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/dashboard/view/[id]": "pages/dashboard/view/[id].js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/api/application/response/[id]": "pages/api/application/response/[id].js"
+  "/_document": "pages/_document.js"
 }

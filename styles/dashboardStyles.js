@@ -41,6 +41,14 @@ export const SubmittedForm = styled.div`
   p{
     font-size: 24px;
   }
+  @media (max-width: 480px){
+    h2{
+      font-size: 26px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
 `;
 
 

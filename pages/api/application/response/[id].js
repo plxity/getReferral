@@ -26,10 +26,11 @@ export default async function handler(req, res) {
       creator: id,
     });
     if (!fetchResponseObject) {
-      res.status(200).json({ responses: [] });
+      return res.status(200).json({ responses: [] });
     }
+ 
     const { responses = [] } = fetchResponseObject;
-    res.status(200).json({ responses: responses });
+    return res.status(200).json({ responses: responses });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ error: 'Something went wrong' });

@@ -15,7 +15,14 @@ import {
   getSortedRowModel,
 } from '@tanstack/react-table';
 
-import { TableHeading, TableRow, TableData, FilterContainer, SortIconContainer, NoRecord } from './styles';
+import {
+  TableHeading,
+  TableRow,
+  TableData,
+  FilterContainer,
+  SortIconContainer,
+  NoRecord,
+} from './styles';
 import { rankItem, compareItems, rankings } from '@tanstack/match-sorter-utils';
 
 const table = createTable()
@@ -45,8 +52,8 @@ const table = createTable()
     },
   });
 
-function ResponseTable({ responses }) {
-  const [data, setData] = useState(responses?.responses);
+function ResponseTable({ responses = {} }) {
+  const [data, setData] = useState(responses?.responses || []);
   const rerender = useReducer(() => ({}), {})[1];
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);
@@ -220,8 +227,10 @@ function ResponseTable({ responses }) {
             </tr>
           ))}
         </thead>
-        {data.length === 0 ?  <NoRecord>No records found</NoRecord> : (
-            <tbody>
+        {data?.length ? (
+          <NoRecord>No records found</NoRecord>
+        ) : (
+          <tbody>
             {instance
               .getRowModel()
               .rows.slice(0, 10)
@@ -239,8 +248,7 @@ function ResponseTable({ responses }) {
                 );
               })}
           </tbody>
-        ) }
-      
+        )}
       </table>
     </div>
   );
@@ -273,11 +281,7 @@ function Filter({ column, instance }) {
               onChange={(value) =>
                 column.setFilterValue((old) => [value, old?.[1]])
               }
-              placeholder={`Min ${
-                column.getFacetedMinMaxValues()?.[0]
-                  ? `(${column.getFacetedMinMaxValues()[0]})`
-                  : ''
-              }`}
+              placeholder="Min"
             />
             <DebouncedInput
               type="number"
@@ -287,11 +291,7 @@ function Filter({ column, instance }) {
               onChange={(value) =>
                 column.setFilterValue((old) => [old?.[0], value])
               }
-              placeholder={`Max ${
-                column.getFacetedMinMaxValues()?.[0]
-                  ? `(${column.getFacetedMinMaxValues()?.[0]})`
-                  : ''
-              }`}
+              placeholder="Max"
             />
           </div>
         </div>

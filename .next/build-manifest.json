@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/create": [
+    "/dashboard/view/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/create.js"
-    ],
-    "/dashboard/view": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashboard/view.js"
+      "static/chunks/pages/dashboard/view/[id].js"
     ]
   },
   "ampFirstPages": []

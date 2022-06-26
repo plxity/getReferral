@@ -15,6 +15,7 @@ function ViewResponse() {
   // fetching information for a particular Job ID.
   const router = useRouter();
 
+  
   useEffect(() => {
     if (Object.keys(router.query).length > 0) {
       const { id } = router.query;

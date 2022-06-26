@@ -80,9 +80,9 @@ export const SubHeading = styled.p`
   }
 `;
 
-export const BlueText = styled.p`
+export const BlueText = styled.span`
   margin-top: 12px;
-
+  display: block;
   color: ${(props) => props.theme.color.blue};
 `;
 

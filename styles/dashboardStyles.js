@@ -43,3 +43,9 @@ export const SubmittedForm = styled.div`
   }
 `;
 
+
+
+export const CopyLink = styled.span`
+  text-decoration: underline;
+  cursor: pointer;
+`

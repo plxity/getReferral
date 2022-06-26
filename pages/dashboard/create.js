@@ -3,11 +3,13 @@ import { useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import Header from '../../components/Navbar';
+import { copyText } from '../../utils';
 import {
   CreateApplicationContainer,
   CustomHeading,
   Form,
   SubmittedForm,
+  CopyLink,
 } from '../../styles/dashboardStyles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -23,6 +25,7 @@ export default function CreateOpening() {
   });
   const [applicationId, setApplicationId] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [copied, setCopied] = useState(false);
   const onSubmit = (e) => {
     e.preventDefault();
     axios
@@ -59,11 +62,13 @@ export default function CreateOpening() {
         <SubmittedForm>
           <h2>Job opening successfull created.</h2>
           <p>
-            Share this{' '}
-            <a href={`${window.location.origin}/apply/${applicationId}`}>
-              link
-            </a>{' '}
-            with people so that they can apply.
+            <CopyLink
+              onClick={(e) => copyText(e, setCopied)}
+              data-link={`${window.location.origin}/apply/${applicationId}`}
+            >
+              {copied ? 'Copied' : 'Copy this link'}
+            </CopyLink>{' '}
+            and share with people so that they can apply.
           </p>
         </SubmittedForm>
       );

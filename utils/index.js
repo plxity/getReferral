@@ -6,7 +6,7 @@ export const getModifiedDate = (dateWithTimeStamp) => {
   return date + '/' + month + '/' + year;
 };
 
-export const copyText = (e, fn) => {
+export const copyText = (e, fn = () => {}) => {
   e.preventDefault();
   navigator.clipboard.writeText(e.target.getAttribute('data-link')).then(
     (res) => {

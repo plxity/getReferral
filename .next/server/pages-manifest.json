@@ -1,18 +1,7 @@
 {
+  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/_app": "pages/_app.js",
-  "/api/application/create": "pages/api/application/create.js",
-  "/api/application/submit/[id]": "pages/api/application/submit/[id].js",
-  "/api/application/response/[id]": "pages/api/application/response/[id].js",
-  "/api/application/view": "pages/api/application/view.js",
-  "/api/application/view/[id]": "pages/api/application/view/[id].js",
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/dashboard/create": "pages/dashboard/create.html",
-  "/apply/[id]": "pages/apply/[id].html",
-  "/dashboard": "pages/dashboard.html",
-  "/dashboard/view": "pages/dashboard/view.html",
-  "/dashboard/view/[id]": "pages/dashboard/view/[id].html",
-  "/": "pages/index.html",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }

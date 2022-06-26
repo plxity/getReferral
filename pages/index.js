@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>ReferMe</title>
+        <title>getReferral</title>
         <meta name="description" content="Referrals made easy" />
         <link rel="icon" href="/logo.svg" />
       </Head>

@@ -227,7 +227,7 @@ function ResponseTable({ responses = {} }) {
             </tr>
           ))}
         </thead>
-        {data?.length ? (
+        {data.length === 0 ? (
           <NoRecord>No records found</NoRecord>
         ) : (
           <tbody>

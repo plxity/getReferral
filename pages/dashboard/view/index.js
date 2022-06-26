@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Card from '../../../components/Card';
 import Header from '../../../components/Navbar';
-import { ViewApplicationContainer, NoApplication } from './styles';
+import { ViewApplicationContainer, NoApplication } from '../../../styles/viewStyles';
 
 export default function CreateOpening() {
   const [applicationData, setApplicationData] = useState([]);

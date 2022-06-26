@@ -8,7 +8,7 @@ import {
   CustomHeading,
   Form,
   SubmittedForm,
-} from './styles';
+} from '../../styles/dashboardStyles';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 

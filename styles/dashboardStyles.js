@@ -42,3 +42,4 @@ export const SubmittedForm = styled.div`
     font-size: 24px;
   }
 `;
+

@@ -11,6 +11,7 @@ export const MainContainer = styled.main`
   }
   .main-logo {
     width: 430px;
+    height: 400px;
     @media (max-width: 880px) {
       width: 300px;
       height: 300px;

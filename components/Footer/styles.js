@@ -14,5 +14,7 @@ export const FooterContainer = styled.footer`
     vertical-align: middle;
     margin-left: 10px;
     height: 100%;
+    width: 30px;
+    height: 30px;
   }
 `;

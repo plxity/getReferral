@@ -9,8 +9,9 @@ export const Header = styled.header`
   img {
     vertical-align: middle;
     cursor: pointer;
-    width: auto;
-    height: auto;
+    width: 140px;
+    height: 80px;
+}
   }
   .fit-image {
     border-radius: 50%;

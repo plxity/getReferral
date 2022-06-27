@@ -7,12 +7,12 @@ const Meta = ({
   return (
     <Head>
       <title>getReferral</title>
-      <meta name="title" content={`${title} ${companyName}`} />
+      <meta name="title" content="getReferral - referrals made easy" />
       <meta
         name="description"
         content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
       />
-      <meta itemprop="name" content={`${title} ${companyName}`} />
+      <meta itemprop="name" content="getReferral - referrals made easy" />
       <meta
         itemprop="description"
         content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
@@ -24,7 +24,7 @@ const Meta = ({
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://get-referral.vercel.app/" />
-      <meta property="og:title" content={`${title} ${companyName}`} />
+      <meta property="og:title" content="getReferral - referrals made easy" />
       <meta
         property="og:description"
         content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"

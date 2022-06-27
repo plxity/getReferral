@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     } = req;
     const PEERLIST_URL = process.env.PEERLIST_URL;
     const { email, peerlistUserName, userId } = body;
-    console.log(email, peerlistUserName, userId)
+    console.log(email, peerlistUserName, userId);
     const fetchAllResponses = await Responses.findOne({
       applicationId: id,
     });
@@ -20,7 +20,13 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'vdvd' });
     }
     let peerlistDetails = await axios.get(
-      `${PEERLIST_URL}username=${peerlistUserName}`
+      `${PEERLIST_URL}username=${peerlistUserName}`,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        },
+      }
     );
     if (!peerlistDetails) {
       return res.status(300).json({ error: 'vdvd' });

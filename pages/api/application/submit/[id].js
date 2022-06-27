@@ -15,9 +15,15 @@ export default async function handler(req, res) {
     const fetchAllResponses = await Responses.findOne({
       applicationId: id,
     });
+    if (!fetchAllResponses) {
+      return res.status(400).json({ error: 'vdvd' });
+    }
     let peerlistDetails = await axios.get(
       `${PEERLIST_URL}username=${peerlistUserName}`
     );
+    if (!peerlistDetails) {
+      return res.status(300).json({ error: 'vdvd' });
+    }
     peerlistDetails = peerlistDetails?.data?.data;
     const {
       skills = [],

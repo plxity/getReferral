@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { ApplyContainer, Heading, SubHeading } from '../../styles/applyStyles';
 import Header from '../../components/Navbar';
+import { getModifiedDate } from '../../utils';
 import ApplyModal from '../../components/ApplyModal';
 function ApplyForApplication() {
   const [loading, setLoading] = useState(true);
@@ -61,7 +62,7 @@ function ApplyForApplication() {
         </SubHeading>
 
         <SubHeading>
-          <b>Posted at:</b> {date}
+          <b>Posted at:</b> {getModifiedDate(date)}
         </SubHeading>
         <SubHeading>
           <b>Job Description:</b> <a href={jobDescription}>Link</a>

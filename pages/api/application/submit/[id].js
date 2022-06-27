@@ -15,11 +15,9 @@ export default async function handler(req, res) {
     const fetchAllResponses = await Responses.findOne({
       applicationId: id,
     });
-    console.log(fetchAllResponses, PEERLIST_URL);
     let peerlistDetails = await axios.get(
       `${PEERLIST_URL}username=${peerlistUserName}`
     );
-    console.log(peerlistDetails);
     peerlistDetails = peerlistDetails?.data?.data;
     const {
       skills = [],

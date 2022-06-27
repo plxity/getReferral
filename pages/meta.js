@@ -1,9 +1,9 @@
 import Head from 'next/head';
 
-const Meta = ({
+export default function Meta({
   title = 'getReferral - referrals made easy',
   companyName = '',
-}) => {
+}) {
   return (
     <Head>
       <title>getReferral</title>
@@ -48,5 +48,4 @@ const Meta = ({
       <link rel="icon" href="/logo.svg" />
     </Head>
   );
-};
-export default Meta;
+}

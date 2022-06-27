@@ -4,7 +4,7 @@ import Header from '../components/Navbar';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 import { Container } from '../styles/globalStyles';
-import Meta from './Meta';
+import Meta from './meta';
 
 export default function Home() {
   const { status } = useSession();
@@ -21,12 +21,12 @@ export default function Home() {
   }
 
   return (
-    <>
 
-      <Meta />
+
+
       <Container>
         {/* Meta tags */}
-
+        <Meta/>
         {/* Navbar component */}
         <Header />
 
@@ -36,6 +36,6 @@ export default function Home() {
         {/* Footer Component */}
         <Footer />
       </Container>
-    </>
+
   );
 }

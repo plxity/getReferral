@@ -4,8 +4,6 @@ import Responses from '../../../../Schema/responses';
 
 dbConnect();
 
-
-
 export default async function handler(req, res) {
   try {
     const {

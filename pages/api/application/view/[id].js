@@ -25,6 +25,10 @@ export default async function handler(req, res) {
         'applicationsCreated',
         { _id: postId }
       );
+      let userId = fetchParticularApplication[0].userId;
+      userProfile = {
+        userId,
+      };
       if (!fetchParticularApplication) {
         res.status(200).json({
           application: [],
@@ -33,9 +37,6 @@ export default async function handler(req, res) {
       }
       fetchParticularApplication =
         fetchParticularApplication[0].applicationsCreated;
-      userProfile = {
-        userId: fetchParticularApplication[0].userId,
-      };
     }
 
     res.status(200).json({

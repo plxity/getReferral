@@ -21,18 +21,21 @@ export default function Home() {
   }
 
   return (
-    <Container>
-      {/* Meta tags */}
+    <>
+
       <Meta />
+      <Container>
+        {/* Meta tags */}
 
-      {/* Navbar component */}
-      <Header />
+        {/* Navbar component */}
+        <Header />
 
-      {/* Main Component */}
-      <Main />
+        {/* Main Component */}
+        <Main />
 
-      {/* Footer Component */}
-      <Footer />
-    </Container>
+        {/* Footer Component */}
+        <Footer />
+      </Container>
+    </>
   );
 }

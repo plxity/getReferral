@@ -59,16 +59,18 @@ export default function CreateOpening() {
     if (formSubmitted) {
       return (
         <SubmittedForm>
-          <h2>Job opening created successfully.</h2>
-          <p>
-            <CopyLink
-              onClick={(e) => copyText(e, setCopied)}
-              data-link={`${window.location.origin}/apply/${applicationId}`}
-            >
-              {copied ? 'Copied' : 'Copy this link'}
-            </CopyLink>{' '}
-            and share with people so that they can apply.
-          </p>
+          <h2>Job opening created successfully.</h2>{' '}
+          {applicationId && (
+            <p>
+              <CopyLink
+                onClick={(e) => copyText(e, setCopied)}
+                data-link={`${window.location.origin}/apply/${applicationId}`}
+              >
+                {copied ? 'Copied' : 'Copy this link'}
+              </CopyLink>{' '}
+              and share with people so that they can apply.
+            </p>
+          )}
         </SubmittedForm>
       );
     } else {

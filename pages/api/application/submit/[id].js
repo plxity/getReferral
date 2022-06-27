@@ -12,6 +12,7 @@ export default async function handler(req, res) {
     } = req;
     const PEERLIST_URL = process.env.PEERLIST_URL;
     const { email, peerlistUserName, userId } = body;
+    console.log(email, peerlistUserName, userId)
     const fetchAllResponses = await Responses.findOne({
       applicationId: id,
     });

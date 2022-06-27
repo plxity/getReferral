@@ -1,9 +1,6 @@
 import Head from 'next/head';
 
-export default function Meta({
-  title = 'getReferral - referrals made easy',
-  companyName = '',
-}) {
+export default function Meta() {
   return (
     <Head>
       <title>getReferral</title>

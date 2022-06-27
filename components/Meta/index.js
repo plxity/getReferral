@@ -8,7 +8,10 @@ const Meta = ({
     <Head>
       <title>getReferral</title>
       <meta name="title" content={`${title} ${companyName}`} />
-      <meta name="description" content="" />
+      <meta
+        name="description"
+        content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
+      />
       <meta itemprop="name" content={`${title} ${companyName}`} />
       <meta
         itemprop="description"

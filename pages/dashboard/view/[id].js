@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useSession } from 'next-auth/react';
 import axios from 'axios';
 import { ResponseContainer } from '../../../styles/viewStyles';
 import Header from '../../../components/Navbar';
@@ -41,12 +40,14 @@ function ViewResponse() {
     return <Table responses={responses} />;
   };
   return (
+    <>
     <ProtectedRoute>
       <Header isAuth={true} />
       <ResponseContainer>
         {error ? <div>Error</div> : renderResponses()}
       </ResponseContainer>
     </ProtectedRoute>
+    </>
   );
 }
 

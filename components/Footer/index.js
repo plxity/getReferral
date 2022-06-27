@@ -3,7 +3,9 @@ function Footer() {
   return (
     <FooterContainer>
       <span>Powered by</span>
-      <img src="/icons/peerlistLogo.svg" alt="Peerlist logo" />
+      <a href="https://peerlist.io/" target="_blank">
+        <img src="/icons/peerlistLogo.svg" alt="Peerlist logo" />
+      </a>
     </FooterContainer>
   );
 }

@@ -32,11 +32,10 @@ export default function CreateOpening() {
       .post('/api/application/create', formData)
       .then((res) => {
         setApplicationId(res?.data?.application?._id);
-        console.log(res);
         setFormSubmitted(true);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        alert('Something went wrong. Please try again.');
       });
   };
   const {

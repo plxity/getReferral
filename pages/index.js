@@ -1,10 +1,10 @@
-import Head from 'next/head';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import Header from '../components/Navbar';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 import { Container } from '../styles/globalStyles';
+import Meta from '../components/Meta';
 
 export default function Home() {
   const { status } = useSession();
@@ -22,11 +22,8 @@ export default function Home() {
 
   return (
     <Container>
-      <Head>
-        <title>getReferral</title>
-        <meta name="description" content="Referrals made easy" />
-        <link rel="icon" href="/logo.svg" />
-      </Head>
+      {/* Meta tags */}
+      <Meta />
 
       {/* Navbar component */}
       <Header />

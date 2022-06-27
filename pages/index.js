@@ -4,7 +4,7 @@ import Header from '../components/Navbar';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 import { Container } from '../styles/globalStyles';
-import Meta from '../components/Meta';
+import Meta from './Meta';
 
 export default function Home() {
   const { status } = useSession();

@@ -11,6 +11,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ status: peerlistDetails.data.data });
   } catch (err) {
     console.log(err);
-    return res.status(500).json({ error: 'Something went wrong' });
+    return res.status(500).json({ error: err });
   }
 }

@@ -4,7 +4,6 @@ import axios from 'axios';
 import { ApplyContainer, Heading, SubHeading } from '../../styles/applyStyles';
 import Header from '../../components/Navbar';
 import ApplyModal from '../../components/ApplyModal';
-import Meta from '../../components/Meta';
 function ApplyForApplication() {
   const [loading, setLoading] = useState(true);
   const [application, setApplication] = useState(false);
@@ -49,7 +48,6 @@ function ApplyForApplication() {
 
   return (
     <>
-      <Meta title={title} companyName={companyName} />
       {/* Header component */}
       <Header />
       <ApplyContainer>

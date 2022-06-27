@@ -4,7 +4,7 @@ import Responses from '../../../../Schema/responses';
 
 dbConnect();
 
-const PEERLIST_URL = process.env.PEERLIST_URL;
+
 
 export default async function handler(req, res) {
   try {
@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       query: { id },
       body,
     } = req;
-
+    const PEERLIST_URL = process.env.PEERLIST_URL;
     const { email, peerlistUserName, userId } = body;
     const fetchAllResponses = await Responses.findOne({
       applicationId: id,

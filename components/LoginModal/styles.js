@@ -21,6 +21,10 @@ export const StyledContent = styled(Dialog.Content)`
   box-shadow: 0px 4px 4px rgba(4, 40, 197, 0.1);
   border-radius: 16px;
   transform: translate(-50%, -50%);
+  .user-image{
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const CloseIcon = styled.img`

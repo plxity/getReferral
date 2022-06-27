@@ -26,7 +26,7 @@ const LoginModal = () => (
       </CreateProfile>
     </Dialog.Trigger>
     <DialogContent>
-      <img src="/loginBro.svg" />
+      <img src="/loginBro.svg"  className='user-image'/>
       <ButtonContainer>
         <LoginButton onClick={() => signIn('google')}>
           Login with Google{' '}

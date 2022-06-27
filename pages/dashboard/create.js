@@ -60,7 +60,7 @@ export default function CreateOpening() {
     if (formSubmitted) {
       return (
         <SubmittedForm>
-          <h2>Job opening successfull created.</h2>
+          <h2>Job opening created successfully.</h2>
           <p>
             <CopyLink
               onClick={(e) => copyText(e, setCopied)}

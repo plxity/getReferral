@@ -6,25 +6,34 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <title>getReferral</title>
-          <meta name="title" content="getReferral" />
           <meta
             name="description"
             content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
           />
-          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="og:title" content="getReferral" />
           <meta
-            property="twitter:url"
-            content="https://get-referral.vercel.app/"
-          />
-          <meta property="twitter:title" content="getReferral" />
-          <meta
-            property="twitter:description"
+            property="og:description"
             content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
           />
           <meta
-            property="twitter:image"
+            property="og:image"
             content="https://res.cloudinary.com/dhunsqg4j/image/upload/v1656337546/Group_102_wel9ok.png"
           />
+          <meta
+            property="og:url"
+            content="https://get-referral-git-add-meta-tags-plxity.vercel.app/"
+          />
+          <meta name="twitter:title" content="getReferral" />
+          <meta
+            name="twitter:description"
+            content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
+          />
+          <meta
+            name="twitter:image"
+            content="https://res.cloudinary.com/dhunsqg4j/image/upload/v1656337546/Group_102_wel9ok.png"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <link rel="icon" href="/logo.svg" />
           <link rel="icon" href="/logo.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link

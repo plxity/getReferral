@@ -10,7 +10,7 @@ export const StyledOverlay = styled(Dialog.Overlay)`
 export const StyledContent = styled(Dialog.Content)`
   background: white;
   height: auto;
-  width: 380px;
+  width: 360px;
   padding: 36px;
   position: fixed;
   top: 50%;

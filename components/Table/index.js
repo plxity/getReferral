@@ -1,6 +1,11 @@
 import { useState, useReducer, useMemo, useEffect } from 'react';
 import { Pills } from './styles';
-import { getCurrentCompany, getTotalExp, restrictedDropDown } from './utils';
+import {
+  getCurrentCompany,
+  getTotalExp,
+  restrictedDropDown,
+  findUniqueResponses,
+} from './utils';
 import DebouncedInput from './DebounceInput';
 import {
   createTable,
@@ -53,7 +58,9 @@ const table = createTable()
   });
 
 function ResponseTable({ responses = {} }) {
-  const [data, setData] = useState(responses?.responses || []);
+  const [data, setData] = useState(
+    () => findUniqueResponses(responses?.responses) || []
+  );
   const rerender = useReducer(() => ({}), {})[1];
   const [sorting, setSorting] = useState([]);
   const [columnFilters, setColumnFilters] = useState([]);

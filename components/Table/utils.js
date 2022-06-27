@@ -25,6 +25,19 @@ export const getCurrentCompany = (exp) => {
   return exp.find((e) => e.current === true)?.company;
 };
 
+export const findUniqueResponses = (responses = []) => {
+  const userName = new Set();
+  const filteredArray = responses.filter((res) => {
+    const { peerlistUserName } = res;
+    if (userName.has(peerlistUserName)) {
+      return false;
+    }
+    userName.add(peerlistUserName);
+    return true;
+  });
+  return filteredArray;
+};
+
 export const restrictedDropDown = [
   'Skills',
   'PreviousCompanies',

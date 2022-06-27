@@ -51,7 +51,8 @@ export const CreateProfile = styled.button`
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
-  background: ${(props) => props.submitted ? '#008436': props.theme.color.blue};
+  background: ${(props) =>
+    props.submitted ? '#008436' : props.theme.color.blue};
   border: none;
   border-radius: 40px;
   border: 1px solid ${(props) => props.theme.color.blue};
@@ -87,10 +88,12 @@ export const InputContainer = styled.div`
   padding: 14px;
   position: relative;
   text-align: left;
+
   img {
     position: absolute;
     width: 22px;
     height: 22px;
+    right: 16px;
   }
   @media (max-width: 880px) {
     width: 100%;
@@ -102,6 +105,10 @@ export const Input = styled.input`
   width: 90%;
   outline: none;
   font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const ConnectPeerlist = styled(CreateProfile)`

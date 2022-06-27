@@ -4,7 +4,7 @@ export default function Meta() {
   return (
     <Head>
       <title>getReferral</title>
-      <meta name="title" content="getReferral - referrals made easy" />
+      <meta name="title" content="c" />
       <meta
         name="description"
         content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"
@@ -33,7 +33,7 @@ export default function Meta() {
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://get-referral.vercel.app/" />
-      <meta property="twitter:title" content={`${title} ${companyName}`} />
+      <meta property="twitter:title" content="getReferral - referrals made easy" />
       <meta
         property="twitter:description"
         content="Manage your referrals without any hassle and apply to job openings in one click powered by Peerlist"

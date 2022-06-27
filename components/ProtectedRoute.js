@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
-import Loader from '../components/Loader';
+import Meta from '../pages/meta';
 const ProtectedRoute = (props) => {
   const router = useRouter();
   const { status } = useSession({
@@ -14,7 +14,12 @@ const ProtectedRoute = (props) => {
     return <div />;
   }
 
-  return props.children;
+  return (
+    <>
+      <Meta />
+      {props.children}
+    </>
+  );
 };
 
 export default ProtectedRoute;

@@ -26,7 +26,7 @@ export default function Home() {
 
       <Container>
         {/* Meta tags */}
-        <Meta/>
+        
         {/* Navbar component */}
         <Header />
 

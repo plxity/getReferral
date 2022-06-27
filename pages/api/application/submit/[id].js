@@ -59,7 +59,7 @@ export default async function handler(req, res) {
       fetchAllResponses.responses.push({ ...userData });
       await fetchAllResponses.save();
     }
-    res.status(200).json({ status: 'Successfully submitted' });
+    return res.status(200).json({ status: 'Successfully submitted' });
   } catch (err) {
     console.log(err);
     return res.status(500).json({ error: 'Something went wrong' });

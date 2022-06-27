@@ -9,39 +9,25 @@ export default async function handler(req, res) {
   try {
     const session = await getSession({ req });
     const { id: postId } = req.query;
-    let id, userProfile, fetchParticularApplication;
-    if (session) {
-      id = session.id;
-      userProfile = await Profile.findOne({
-        userId: id,
+    let id, userProfile, fetchAllApplications;
+    fetchAllApplications = await Profile.findOne().elemMatch(
+      'applicationsCreated',
+      { _id: postId }
+    );
+    if (!fetchAllApplications) {
+      return res.status(200).json({
+        application: [],
+        userId: null,
       });
-      fetchParticularApplication = userProfile.applicationsCreated.filter(
-        (application) => {
-          return application._id.toString() === postId;
-        }
-      );
-    } else {
-      fetchParticularApplication = await Profile.find().elemMatch(
-        'applicationsCreated',
-        { _id: postId }
-      );
-      let userId = fetchParticularApplication[0].userId;
-      userProfile = {
-        userId,
-      };
-      if (!fetchParticularApplication) {
-        res.status(200).json({
-          application: [],
-          userId: null,
-        });
-      }
-      fetchParticularApplication =
-        fetchParticularApplication[0].applicationsCreated;
     }
+    const { userId, applicationsCreated } = fetchAllApplications;
+    const requestedApplication = applicationsCreated.find((app) => {
+      return app._id.toString() === postId;
+    });
 
-    res.status(200).json({
-      application: fetchParticularApplication,
-      userId: userProfile?.userId || null,
+    return res.status(200).json({
+      application: [requestedApplication],
+      userId: userId,
     });
   } catch (err) {
     console.log(err);

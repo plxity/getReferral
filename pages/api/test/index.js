@@ -1,6 +1,6 @@
 import axios from 'axios';
 import dbConnect from '../../../lib/connectMainDB';
-import Responses from '../../../../Schema/responses';
+
 
 dbConnect();
 

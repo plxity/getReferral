@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       applicationId: id,
     });
     let peerlistDetails = await axios.get(
-      `https://peerlist.io/api/v1/users/resume?username=${peerlistUserName}`
+      `${PEERLIST_URL}?username=${peerlistUserName}`
     );
     peerlistDetails = peerlistDetails?.data?.data;
     const {

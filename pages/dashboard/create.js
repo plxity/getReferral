@@ -59,7 +59,7 @@ export default function CreateOpening() {
     if (formSubmitted) {
       return (
         <SubmittedForm>
-          <h2>Job opening created successfully.</h2>
+          <h2>Opening created successfully.</h2>
           {applicationId && (
             <p>
               <CopyLink

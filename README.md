@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# getReferral <img src="./public/logo.svg" style="width: 12%; height:20%;" />
 
-## Getting Started
 
-First, run the development server:
+A simplified and easy solution to manage the referrals. Don't let your DMs be flooded with so many resumes and messages. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Filter out the profile and hire the best talents in the industry.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Apply with one click for any referral, and avoid filling out forms and sending emails with resumes.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Free, convenient and easy to use.** ( Powered by Peerlist )
 
-## Learn More
+Link - https://get-referral.vercel.app/
+### Key features
 
-To learn more about Next.js, take a look at the following resources:
+- Prevent a lot of DMs
+- Chances to best profiles getting skipped **reduced**.
+- **Filter profiles** with a lot of flexible parameters
+- Reduce **duplicate entries**, saves time
+- **Easy one-click apply** for candidates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Upcoming features
 
-## Deploy on Vercel
+- Feature to **bookmark profiles** in the response table to save them for future
+- Dashboard for candidates to **view previous application**
+- **Referral rate score** for job creators to get a better idea.
+- Integration with **LinkedIn**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+### Project setup
+1. ```npm install```
+  
+
+2. Create an `.env` file and add the following variables.
+
+
+    ```
+    GOOGLE_ID=''
+    GOOGLE_SECRET='
+    MONGODB_URI=''
+    LINKEDIN_ID=''
+    LINKEDIN_SECRET=''
+    ```
+
+3. `npm run dev`
+4. Open `http://localhost:3000/`
+
+
+### Design Link
+
+1. [Figma Link](https://www.figma.com/file/7mptGEX3U75LTnuZb8R8pA/Hackathon?node-id=20%3A33)
+
+
+### Tech stack
+
+ **Frontend**
+ 
+ - NextJS
+ - Styled-Components
+ - Next-Auth
+ - Radix-UI
+ - React-Table
+
+ **Backend**
+ - MongoDB (By Linode)
+
+
+### Dashboard
+- Login Screen
+<img src="./assets/dashboard.png" />
+- User Dashboard
+<img src="./assets/loggedinDashboard.png"/>
+- Response screen 
+<img src="./assets/response.png"/>
+  
+
+  <br/>
+
+  **[Linode](https://www.linode.com/?utm_source=hashnode&utm_medium=article&utm_campaign=hackathon_announcement) X [Hashnode](https://hashnode.com/) Hackathon submission**
+
+
+
+
+

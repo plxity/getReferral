@@ -42,11 +42,12 @@ export const SubmittedForm = styled.div`
     font-size: 24px;
   }
   @media (max-width: 480px){
+    padding: 0px 12px;
     h2{
-      font-size: 26px;
+      font-size: 24px;
     }
     p{
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 `;

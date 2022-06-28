@@ -5,9 +5,8 @@ export const FooterContainer = styled.footer`
   text-align: center;
   margin-top: auto;
   margin-bottom: 20px;
-  bottom: 20px;
-  height: 30px;
-  span{
+  height: auto;
+  span {
     vertical-align: middle;
   }
   img {
@@ -16,5 +15,12 @@ export const FooterContainer = styled.footer`
     height: 100%;
     width: 30px;
     height: 30px;
+  }
+`;
+
+export const IconContainer = styled.div`
+  display: inline-block;
+  a {
+    margin-left: 4px;
   }
 `;

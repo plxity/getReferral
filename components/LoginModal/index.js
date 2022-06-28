@@ -17,6 +17,7 @@ function Content({ children, ...props }) {
   );
 }
 const DialogContent = Content;
+
 const LoginModal = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
@@ -26,7 +27,7 @@ const LoginModal = () => (
       </CreateProfile>
     </Dialog.Trigger>
     <DialogContent>
-      <img src="/loginBro.svg"  className='user-image'/>
+      <img src="/loginBro.svg" className="user-image" />
       <ButtonContainer>
         <LoginButton onClick={() => signIn('google')}>
           Login with Google{' '}

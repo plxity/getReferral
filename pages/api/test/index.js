@@ -1,15 +1,13 @@
 import axios from 'axios';
 
-
-const handler = async (req, resp) => {
-	const response = await axios.get(
-		"https://internal-dashboard-production.up.railway.app/api/v1/test"
-	);
-
-	resp.send({
-		success: true,
-		data: response.data,
-	});
-};
-
-export default handler;
+export default async function handler(req, res) {
+  try {
+    let peerlistDetails = await axios.get(
+      `https://peerlist.io/api/v1/users/resume?username=plxity`
+    );
+    return res.status(200).json({ status: peerlistDetails.data });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: err });
+  }
+}

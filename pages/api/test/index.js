@@ -2,9 +2,8 @@ import axios from 'axios';
 
 export default async function handler(req, res) {
   try {
-    const PEERLIST_URL = process.env.PEERLIST_URL;
     let peerlistDetails = await axios.get(
-      `${PEERLIST_URL}username=plxity`
+      `https://peerlist.io/api/v1/users/resume?username=plxity`
     );
     return res.status(200).json({ status: peerlistDetails.data.data });
   } catch (err) {

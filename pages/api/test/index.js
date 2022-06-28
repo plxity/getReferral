@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const handler = async (req, resp) => {
 	const response = await axios.get(
-		`https://peerlist.io/api/v1/users/resume?username=plxity`
+		"https://internal-dashboard-production.up.railway.app/api/v1/test"
 	);
 
 	resp.send({

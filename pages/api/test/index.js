@@ -1,17 +1,16 @@
 import axios from 'axios';
 
 export default async function handler(req, res) {
-  fetch('https://peerlist.io/api/v1/users/resume?username=plxity')
-    .then((response) => {
-      console.log(response);
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-      return res.send(200);
-    })
-    .catch((err) => {
-      console.log(err);
-      return res.send(400);
-    });
+  try {
+    let peerlistDetails = await axios.get(
+      `https://peerlist.io/api/v1/users/resume?username=plxity`,
+      {
+        crossDomain: true,
+      }
+    );
+    return res.status(200).json({ status: peerlistDetails.data });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: err });
+  }
 }

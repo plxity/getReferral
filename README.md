@@ -20,8 +20,7 @@ Link - https://get-referral.vercel.app/
 - Reduce **duplicate entries**, saves time
 - **Easy one-click apply** for candidates
 
-
-#### Upcoming features
+### Upcoming features
 
 - Feature to **bookmark profiles** in the response table to save them for future
 - Dashboard for candidates to **view previous application**
@@ -72,11 +71,11 @@ Link - https://get-referral.vercel.app/
 
 ### Dashboard
 - Login Screen
-<img src="./assets/dashboard.png" />
+  <img src="./assets/dashboard.png" />
 - User Dashboard
-<img src="./assets/loggedinDashboard.png"/>
+  <img src="./assets/loggedinDashboard.png"/>
 - Response screen 
-<img src="./assets/response.png"/>
+  <img src="./assets/response.png"/>
   
 
   <br/>

@@ -108,8 +108,9 @@ export default function CreateOpening() {
               name="compensation"
             />
             <Input
-              placeholder="Job Description (Link or Information)"
+              placeholder="Job Description (Link - https://example.com)"
               value={jobDescription}
+              type="url"
               onChange={onChange}
               name="jobDescription"
               required={true}

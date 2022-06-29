@@ -124,6 +124,10 @@ export const CelebrationContainer = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 30px;
+  img{
+    width: 200px;
+    height: 150px;
+  }
 `;
 export const Congrats = styled.h2`
   font-size: 28px;

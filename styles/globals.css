@@ -25,3 +25,22 @@ td {
   border-collapse: collapse;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: rgb(170, 170, 170);
+  border-radius: 18px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(170, 170, 170);
+}

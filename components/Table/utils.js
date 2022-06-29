@@ -41,7 +41,7 @@ export const findUniqueResponses = (responses = []) => {
 export const restrictedDropDown = [
   'Skills',
   'PreviousCompanies',
-  'fullName',
+  'Full Name',
   'email',
   'Peerlist Username',
 ];

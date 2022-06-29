@@ -75,7 +75,7 @@ function ResponseTable({ responses = {} }) {
           table.createDataColumn(
             (row) => `${row.firstName} ${row.lastName || ''}`,
             {
-              id: 'fullName',
+              id: 'Full Name',
               header: 'Full Name',
               cell: (info) => info.getValue(),
               footer: (props) => props.column.id,
@@ -282,6 +282,7 @@ function Filter({ column, instance }) {
           <div>
             <DebouncedInput
               type="number"
+              className="w-80"
               min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
               max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
               value={columnFilterValue?.[0] ?? ''}
@@ -292,6 +293,7 @@ function Filter({ column, instance }) {
             />
             <DebouncedInput
               type="number"
+              className="w-80"
               min={Number(column.getFacetedMinMaxValues()?.[0] ?? '')}
               max={Number(column.getFacetedMinMaxValues()?.[1] ?? '')}
               value={columnFilterValue?.[1] ?? ''}

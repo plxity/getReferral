@@ -48,8 +48,12 @@ export const FilterContainer = styled.div`
 export const StyledInput = styled.input`
   height: 30px;
   border-radius: 30px;
+  max-width: 200px;
   border: 1px solid ${(props) => props.theme.color.blue};
   padding-left: 14px;
+  .w-80{
+    width: 80px;
+  }
 `;
 
 export const SortIconContainer = styled.div`

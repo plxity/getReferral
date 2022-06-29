@@ -33,11 +33,13 @@ export const TableData = styled.td`
   padding: 16px;
   border: 1px solid rgba(4, 40, 197, 0.3);
   text-align: center;
+  overflow-y: hidden;
   div {
     max-width: 240px;
     height: 50px;
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 `;
 
@@ -51,7 +53,7 @@ export const StyledInput = styled.input`
   max-width: 180px;
   border: 1px solid ${(props) => props.theme.color.blue};
   padding-left: 14px;
-  .w-80{
+  .w-80 {
     width: 80px;
   }
 `;
@@ -65,4 +67,4 @@ export const SortIconContainer = styled.div`
 export const NoRecord = styled.h1`
   text-align: center;
   margin-top: 40px;
-`
+`;

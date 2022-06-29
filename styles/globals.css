@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: 'Lato';
   height: 100vh;
+
 }
 body > div {
   min-height: 100%;
@@ -24,22 +25,22 @@ td {
   border-collapse: collapse;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 8px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: transparent;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: rgb(170, 170, 170);
   border-radius: 18px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
   background: rgb(170, 170, 170);
 }

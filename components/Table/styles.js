@@ -36,7 +36,7 @@ export const TableData = styled.td`
   overflow-y: hidden;
   div {
     max-width: 240px;
-    height: 50px;
+    height: 55px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;

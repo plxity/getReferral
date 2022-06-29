@@ -12,8 +12,8 @@ export const Pills = styled.span`
 
 export const TableHeading = styled.th`
   height: 70px;
-  min-width: 100px;
-  max-width: 200px;
+  min-width: 200px;
+  max-width: 260px;
   padding: 26px;
   font-size: 18px;
   font-weight: 500;
@@ -48,7 +48,7 @@ export const FilterContainer = styled.div`
 export const StyledInput = styled.input`
   height: 30px;
   border-radius: 30px;
-  max-width: 200px;
+  max-width: 180px;
   border: 1px solid ${(props) => props.theme.color.blue};
   padding-left: 14px;
   .w-80{

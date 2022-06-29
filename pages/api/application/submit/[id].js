@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     let peerlistDetails = await axios.get(
       `${PEERLIST_URL}?username=${peerlistUserName}`
     );
-    peerlistDetails = peerlistDetails?.data?.data;
+    peerlistDetails = peerlistDetails?.data?.data?.data;
     const {
       skills = [],
       firstName,
